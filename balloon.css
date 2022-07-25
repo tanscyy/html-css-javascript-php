@@ -1,0 +1,188 @@
+body { margin:20px; background:hsl(70, 31%, 85%); text-align:center; }
+
+.balloon {
+  display:inline-block;
+   width:120px;
+  height:145px;
+  background:hsl(215,50%,65%);
+  border-radius:80%;
+  position:relative;
+  box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+  margin:20px 30px;
+  transition:transform 0.5s ease;
+  z-index:10;
+  animation:balloons 4s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+
+@keyframes balloons {
+  0%,100%{ transform:translateY(0) rotate(-4deg); }
+  50%{ transform:translateY(-25px) rotate(4deg); }
+}
+
+
+.balloon:before {
+  content:"▲";
+  font-size:20px;
+  color:hsl(215,30%,50%);
+  display:block;
+  text-align:center;
+  width:100%;
+  position:absolute;
+  bottom:-12px;
+  z-index:-100;
+}
+
+.balloon:after {
+ display:inline-block; top:153px;
+  position:absolute;
+  height:250px;
+  width:1px;
+  margin:0 auto;
+  content:"";
+  background:rgba(0,0,0,0.2); 
+}
+
+.balloon:nth-child(2){ background:hsl(245,40%,65%); animation-duration:3.5s; }
+.balloon:nth-child(2):before { color:hsl(245,40%,65%);  }
+
+.balloon:nth-child(3){ background:hsl(139,50%,60%); animation-duration:3s; }
+.balloon:nth-child(3):before { color:hsl(139,30%,50%);  }
+
+.balloon:nth-child(4){ background:hsl(59,50%,58%); animation-duration:4.5s; }
+.balloon:nth-child(4):before { color:hsl(59,30%,52%);  }
+
+.balloon:nth-child(5){ background:hsl(23,55%,57%); animation-duration:5s; }
+.balloon:nth-child(5):before { color:hsl(23,44%,46%);  }
+
+img {
+  border-radius: 50%;
+  height: 140px;
+ style="vertical-align:;margin:0px 50px"
+}
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+textarea {
+  font-size: 23px;
+  border:10px solid black;
+  padding: 2rem 1rem;
+  min-height: 5em;
+  resize: both;
+  background: #ffd73e34;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cstyle%3Epath%7Banimation:stroke 5s infinite linear%3B%7D%40keyframes stroke%7Bto%7Bstroke-dashoffset:776%3B%7D%7D%3C/style%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%232d3561' /%3E%3Cstop offset='25%25' stop-color='%23c05c7e' /%3E%3Cstop offset='50%25' stop-color='%23f3826f' /%3E%3Cstop offset='100%25' stop-color='%23ffb961' /%3E%3C/linearGradient%3E %3Cpath d='M1.5 1.5 l97 0l0 97l-97 0 l0 -97' stroke-linecap='square' stroke='url(%23g)' stroke-width='3' stroke-dasharray='388'/%3E %3C/svg%3E") 1;
+}body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: #1a1c1d;
+}
+body > div {
+  max-width: 1000px;
+  padding-top: 50px;
+}
+.exercise {
+  text-align: left;
+  padding-top: 100px;
+  max-width: 500px;
+}
+h1 {
+  font-size: 50px;
+}
+h1,
+h2,
+h3,
+span,
+p,
+a,
+div,
+body,
+button {
+  font-family: "PT Sans", sans-serif;
+  color: #fff;
+}
+
+.balloon {
+  font-size: 35px;
+}
+.exercise {
+  display: none;
+}
+.active {
+    display: block;
+  animation-name: popOut;
+  animation-duration: 4s;
+}
+button {
+  background: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+/* The animation code */
+@keyframes popOut {
+  from {
+    color: #1a1c1d;
+  }
+  to {
+    color: #fff;
+  }
+}
+ {
+  width: 100%;
+  height:100%;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+:root {
+  --border-color: #D7DBE3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --silver: #C0C0C0;
+  --rosegold: #b76e79;
+  --pink: #FF93DE;
+  --purple: #5767ED;
+  --lightblue: #add8e6;
+  --rotation: 0deg;
+  }
+
+@keyframes confettiRain {
+  0% {
+    opacity: 1;
+    margin-top: -100vh;
+    margin-left: -200px;
+  } 
+  
+  100% {
+    opacity: 1;
+    margin-top: 100vh;
+    margin-left: 200px;
+  }
+}
+
+.confetti {
+  opacity: 0;
+  position: absolute;
+  width: 1rem;
+  height: 1.5rem;
+  animation: confettiRain 5s infinite;
+}
